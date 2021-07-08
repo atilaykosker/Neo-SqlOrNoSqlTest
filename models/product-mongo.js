@@ -2,31 +2,31 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
-   alan1:{
-        type:String,
-        required:true
-    },
-    alan2:{
-        type:String,
-        required:true
-    },
-    alan3:{
-        type:String,
-        required:false
-    },
-    alan4:{
-        type:String,
-        required:true
-    },
-    alan5:{
+    id1:{
       type:String,
       required:true
     },
-    alan6:{
+    meslekkod:{
+        type:String,
+        required:true
+    },
+    meslekadi:{
+        type:String,
+        required:false
+    },
+    lastupdate:{
+        type:String,
+        required:true
+    },
+    createddate:{
+      type:String,
+      required:true
+    },
+    timestamp:{
       type:String,
       required:true
     }
 },
-{timestamps:true})  
+{timestamps:false})  
 
 module.exports = mongoose.model('Product',productSchema)
